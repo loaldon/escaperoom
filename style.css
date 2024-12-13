@@ -2,3 +2,20 @@
     background-color: rgb(113, 113, 113);
     color: white;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.item-large {
+    grid-column: span 3;
+    padding: 5px;
+}
+
+.item-small {
+    padding: 5px;
+}

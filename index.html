@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-<body class="home">
-    <p>So this should be the main page I think </p>
-    <h1>Coding Escape Room</h1>
+
+<body class="home container">
+    <header class="header item-large">
+        <h1>Coding Escape Room</h1>
+    </header>
+
+    <div class="item-large">
+        <h2>THEME</h2>
+    </div>
+    <div class="item-small">
+        <button type="button">Hacker Mission</button>
+    </div>
+    <div class="item-small">
+        <button type="button">Time Traveler</button>
+    </div>
+    <div class="item-small">
+        <button type="button">AI Lab Escape</button>
+    </div>
+    <div class="item-large">
+        <p id="theme-description">
+            Click on a button to select a theme!
+        </p>
+    </div>
+
+    <div class="item-large spacer"></div>
+
+    <div class="item-large">
+        <h2>DIFFICULTY</h2>
+    </div>
+    <div class="item-small">
+        <button type="button">Beginner</button>
+    </div>
+    <div class="item-small">
+        <button type="button">Intermediate</button>
+    </div>
+    <div class="item-small">
+        <button type="button">Advanced</button>
+    </div>
+    <div class="item-large">
+        <p id="difficulty-description">
+            Click on a button to select a difficulty!
+        </p>
+    </div>
+
+    <div class="item-large spacer"></div>
+
+    <div class="item-large">
+        <button type="button">LOCKED</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -19,3 +19,11 @@
 .item-small {
     padding: 5px;
 }
+
+button {
+    background-color: rgb(196, 196, 196);
+}
+
+.active {
+    background-color: lightblue;
+}

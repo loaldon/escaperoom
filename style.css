@@ -29,3 +29,7 @@ button {
     padding: 5px;
     flex-basis: 100%;
 }
+
+#begin-requirements {
+    color: lightgray;
+}

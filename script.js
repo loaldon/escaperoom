@@ -45,7 +45,15 @@ function diffChange() {
 }
 
 function beginCheck() {
-    if (theme !== 0 && difficulty !== 0) {
+    let desc = $("#begin-requirements");
+    if (theme === 0 && difficulty === 0) {
+        desc.text("Please select a theme and difficulty.");
+    } else if (difficulty === 0) {
+        desc.text("Please select a difficulty.");
+    } else if (theme === 0) {
+        desc.text("Please select a theme.");
+    } else {
+        desc.remove();
         let begin = $(".begin_button");
         begin.removeAttr("disabled");
         begin.addClass("active");

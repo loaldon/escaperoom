@@ -1,6 +1,6 @@
-var difficulty = 0 ;
+let difficulty = 0 ;
 //0 for none, 1 for beginner, 2 for intermediate, 3 for advanced
-var theme = 0;
+let theme = 0;
 //0 for none, 1 for hacker, 2 for time traveler, 3 for AI lab
 
 $(".theme_button").on("click",themeChange);
@@ -15,17 +15,13 @@ function themeChange() {
 
     if (button.text() === "Hacker Mission") {
         theme = 1;
-        desc.text("Solve coding puzzles to infiltrate");
-        desc.append("<br> a secured system");
+        desc.text("Solve coding puzzles to infiltrate a secured system.");
     } else if (button.text() === "Time Traveler") {
         theme = 2;
-        desc.text("Stabilize the timeline by ");
-        desc.append("<br> finding and fixing glitches.");
+        desc.text("Stabilize the timeline by finding and fixing glitches.");
     } else if (button.text() === "AI Lab Escape") {
         theme = 3;
-        desc.text("The AI system has gone rogue and taken over the lab! ");
-        desc.append("<br> Debug it in order to regain control and escape.");
-
+        desc.text("The AI system has gone rogue and taken over the lab! Debug it in order to regain control and escape.");
     }
     beginCheck();
 }
@@ -50,7 +46,7 @@ function diffChange() {
 
 function beginCheck() {
     if (theme !== 0 && difficulty !== 0) {
-        var begin = $(".begin_button");
+        let begin = $(".begin_button");
         begin.removeAttr("disabled");
         begin.addClass("active");
         begin.text("Start");

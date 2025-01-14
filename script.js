@@ -23,6 +23,7 @@ function themeChange() {
         theme = 3;
         desc.text("The AI system has gone rogue and taken over the lab! Debug it in order to regain control and escape.");
     }
+    sessionStorage.setItem("theme", theme);
     beginCheck();
 }
 
@@ -41,6 +42,7 @@ function diffChange() {
         difficulty = 3;
         desc.text("Free response tasks, less detailed hints, and shorter time limit.");
     }
+    sessionStorage.setItem("difficulty", difficulty);
     beginCheck();
 }
 

@@ -1,11 +1,5 @@
-let difficulty = 0 ;
-//0 for none, 1 for beginner, 2 for intermediate, 3 for advanced
-let theme = 0;
-//0 for none, 1 for hacker, 2 for time traveler, 3 for AI lab
-
 $(".theme_button").on("click",themeChange);
 $(".diff_button").on("click",diffChange);
-
 
 function themeChange() {
     let button = $(this);
@@ -23,7 +17,7 @@ function themeChange() {
         theme = 3;
         desc.text("The AI system has gone rogue and taken over the lab! Debug it in order to regain control and escape.");
     }
-    sessionStorage.setItem("theme", theme);
+    localStorage.setItem("theme", theme);
     beginCheck();
 }
 
@@ -42,7 +36,7 @@ function diffChange() {
         difficulty = 3;
         desc.text("Free response tasks, less detailed hints, and shorter time limit.");
     }
-    sessionStorage.setItem("difficulty", difficulty);
+    localStorage.setItem("difficulty", difficulty);
     beginCheck();
 }
 

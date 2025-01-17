@@ -1,2 +1,2 @@
-$("#difficulty").html(difficulty);
-$("#theme").html(theme);
+$("#difficulty").html("Difficulty: " + difficulty);
+$("#theme").html("Theme: " + theme);

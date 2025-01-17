@@ -1,6 +1,9 @@
 $(".theme_button").on("click",themeChange);
 $(".diff_button").on("click",diffChange);
 
+theme = 0;
+difficulty = 0;
+
 function themeChange() {
     let button = $(this);
     let desc = $("#theme-description");

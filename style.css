@@ -1,10 +1,12 @@
-.home {
-    background-color: rgb(113, 113, 113);
-    color: white;
+body {
+    font-family: "Courier New", monospace;
+    background-color: rgb(57, 57, 57);
+    color: lawngreen;
 }
 
-button {
+button, .button {
     background-color: rgb(196, 196, 196);
+    font-family: "Courier New", monospace;
 }
 
 .active {
@@ -31,6 +33,14 @@ button {
 }
 
 #begin-requirements {
-    color: lightgray;
+    color: red;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-variant: small-caps;
+}
+
+h1 {
+    font-size: 3rem;
+}

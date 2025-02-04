@@ -1,7 +1,7 @@
 $("#difficulty").html("Difficulty: " + difficulty);
 $("#theme").html("Theme: " + theme);
 
-let hints = 3;
+let hints = 0;
 
 let questions =[];
 if (theme === 1) {
@@ -9,24 +9,38 @@ if (theme === 1) {
     console.log(questions);
 }
 
-$("#hint").on('click', {value: hints-1}, updateHints);
+let hintButton = $("#hint");
+
+hintButton  .on('click', sendHint);
 
 function answerQuestion() {
     event.preventDefault();
-    updateHints(3);
+    resetHints();
 }
 
 function updateHints(value) {
     hints = value;
-    let item = $("hints");
-    if (value === 3) {
-        item.text("Hint 1/3");
-    }else if (value === 2) {
-        item.text("Hint 2/3");
-    } else if (value === 1) {
-        item.text("Hint 3/3");
+    if (value === 0) {
+        hintButton.text("Hint 1/3");
+    }else if (value === 1) {
+        hintButton.text("Hint 2/3");
+    } else if (value === 2) {
+        hintButton.text("Hint 3/3");
     } else {
-        item.text("Out of hints!");
-        item.attr("disabled", true);
+        hintButton.text("Out of hints!");
+        hintButton.attr("disabled", true);
     }
+}
+
+function sendHint() {
+    let target = $("#show-hint");
+    updateHints(hints + 1);
+    target.text("Hint " + hints + " shown!");
+}
+
+function resetHints() {
+    let target = $("#show-hint");
+    target.text("");
+    hintButton.removeAttr("disabled");
+    updateHints(0);
 }

@@ -5,12 +5,19 @@ body {
 }
 
 button, .button {
-    background-color: rgb(196, 196, 196);
+    background-color: black;
     font-family: "Courier New", monospace;
+    border-color: lawngreen;
+    color: lawngreen;
 }
 
 .active {
-    background-color: lightblue;
+    background-color: lawngreen;
+    border-color: green;
+    color: black;
+}
+button:disabled {
+    opacity: 0.3;
 }
 
 .container {
@@ -33,7 +40,7 @@ button, .button {
 }
 
 #begin-requirements {
-    color: red;
+    color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {

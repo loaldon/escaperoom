@@ -55,7 +55,6 @@ function beginCheck() {
         desc.remove();
         let begin = $(".begin_button");
         begin.removeAttr("disabled");
-        begin.addClass("active");
         begin.text("Start");
     }
 }

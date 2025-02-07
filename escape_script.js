@@ -3,19 +3,26 @@ $("#theme").html("Theme: " + theme);
 
 let hints = 0;
 
-let questions =[];
+let questions = ["question 1", "question 2", "question 3", "question 4", "question 5", "question 6", "question 7", "question 8", "question 9", "question 10"];
 if (theme === 1) {
-    //add questions to the array i guess
+    //theme is Hacker
+    console.log(questions);
+} else if (theme === 2) {
+    //theme is Time
+    console.log(questions);
+} else if (theme === 3) {
+    //theme is AI Lab
     console.log(questions);
 }
 
 let hintButton = $("#hint");
 
-hintButton  .on('click', sendHint);
+hintButton.on('click', sendHint);
 
 function answerQuestion() {
     event.preventDefault();
     resetHints();
+    updateQuestions();
 }
 
 function updateHints(value) {
@@ -44,3 +51,12 @@ function resetHints() {
     hintButton.removeAttr("disabled");
     updateHints(0);
 }
+
+function updateQuestions() {
+    if (questions.length !== 0) {
+        $("#question-desc").html(questions.shift());
+    } else {
+        window.location.href="completion.html";
+    }
+}
+updateQuestions();

@@ -1,8 +1,7 @@
 $(".theme_button").on("click",themeChange);
 $(".diff_button").on("click",diffChange);
 
-theme = 0;
-difficulty = 0;
+resetVars();
 
 function themeChange() {
     let button = $(this);
@@ -57,4 +56,11 @@ function beginCheck() {
         begin.removeAttr("disabled");
         begin.text("Start");
     }
+}
+
+function resetVars() {
+    theme = 0;
+    difficulty = 0;
+    localStorage.removeItem("theme");
+    localStorage.removeItem("difficulty");
 }

@@ -61,5 +61,22 @@ function updateQuestions() {
     } else {
         window.location.href="completion.html";
     }
+    updateAnswers();
+}
+
+function updateAnswers() {
+    let target = $("#answer");
+    let output = "";
+    if (difficulty === 1) {
+        output = "<input type=\"radio\" name='answer' id='answer1' value='answer1'/> <label for='answer1'>Answer 1</label><br>";
+        output += "<input type=\"radio\" name='answer' id='answer2' value='answer2'/> <label for='answer2'>Answer 2</label><br>";
+        output += "<input type=\"radio\" name='answer' id='answer3' value='answer3'/> <label for='answer3'>Answer 3</label><br>";
+        output += "<input type=\"radio\" name='answer' id='answer4' value='answer4'/> <label for='answer4'>Answer 4</label><br>";
+    } else if (difficulty === 2) {
+        output = "<label for='answer'>Fill in </label> <input type='text' name='answer'> <label for='answer'> Blank</label>";
+    } else if (difficulty === 3) {
+        output = "<input type='text' name='answer'>";
+    }
+    target.html(output);
 }
 updateQuestions();

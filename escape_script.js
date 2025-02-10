@@ -4,6 +4,8 @@ $("#theme").html("Theme: " + theme);
 let hints = 0;
 
 let questions = ["question 1", "question 2", "question 3", "question 4", "question 5", "question 6", "question 7", "question 8", "question 9", "question 10"];
+let currentQuestion = "";
+
 if (theme === 1) {
     //theme is Hacker
     console.log(questions);
@@ -54,7 +56,8 @@ function resetHints() {
 
 function updateQuestions() {
     if (questions.length !== 0) {
-        $("#question-desc").html(questions.shift());
+        currentQuestion = questions.shift();
+        $("#question-desc").html(currentQuestion);
     } else {
         window.location.href="completion.html";
     }

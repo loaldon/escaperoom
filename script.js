@@ -1,8 +1,8 @@
 $(".theme_button").on("click",themeChange);
 $(".diff_button").on("click",diffChange);
-
 resetVars();
 
+//Allows the theme buttons to change the current theme.
 function themeChange() {
     let button = $(this);
     let desc = $("#theme-description");
@@ -23,6 +23,7 @@ function themeChange() {
     beginCheck();
 }
 
+//Allows the difficulty buttons to change the current difficulty.
 function diffChange() {
     let button = $(this);
     let desc = $("#difficulty-description");
@@ -42,6 +43,9 @@ function diffChange() {
     beginCheck();
 }
 
+//Checks if theme and difficulty are selected.
+//If they are, enable the start button.
+//Else, show which requirements still need to be met.
 function beginCheck() {
     let desc = $("#begin-requirements");
     if (theme === 0 && difficulty === 0) {
@@ -58,6 +62,8 @@ function beginCheck() {
     }
 }
 
+//Initializes the theme and difficulty values. This way, the start page is always blank
+//and beginCheck() always works as intended.
 function resetVars() {
     theme = 0;
     difficulty = 0;

@@ -47,18 +47,17 @@ function diffChange() {
 //If they are, enable the start button.
 //Else, show which requirements still need to be met.
 function beginCheck() {
-    let desc = $("#begin-requirements");
+    let begin = $("#begin_button");
     if (theme === 0 && difficulty === 0) {
-        desc.text("Please select a theme and difficulty.");
+        begin.attr("title", "Please select a theme and difficulty.");
     } else if (difficulty === 0) {
-        desc.text("Please select a difficulty.");
+        begin.attr("Title", "Please select a difficulty.");
     } else if (theme === 0) {
-        desc.text("Please select a theme.");
+        begin.attr("Title", "Please select a theme.");
     } else {
-        desc.remove();
-        let begin = $(".begin_button");
-        begin.removeAttr("disabled");
-        begin.text("Start");
+        begin.attr("title", "Click to begin!");
+        begin.children().removeAttr("disabled");
+        begin.children().text("Start");
     }
 }
 

@@ -11,3 +11,8 @@ if (localStorage.getItem("theme")) {
 if (localStorage.getItem("difficulty")) {
     difficulty = parseInt(localStorage.getItem("difficulty"));
 }
+
+//Stores list of theme names. themeList[theme] should return current theme.
+let themeList = ["None", "Hacker Mission", "Time Traveler", "AI Lab Escape"];
+//Stores list of difficulty names. difficultyList[difficulty] should return current difficulty.
+let difficultyList = ["None", "Beginner", "Intermediate", "Advanced"];

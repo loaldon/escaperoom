@@ -1,5 +1,5 @@
-$("#difficulty").html("Difficulty: " + difficulty);
-$("#theme").html("Theme: " + theme);
+$("#difficulty").html("Difficulty: " + difficultyList[difficulty]);
+$("#theme").html("Theme: " + themeList[theme]);
 
 //Stores the number of hints used per question.
 let hints = 0;

@@ -34,7 +34,7 @@ function diffChange() {
         desc.text("Tasks are multiple choice, hints are more detailed, and the time limit is longer.");
     } else if (button.text() === "Intermediate") {
         difficulty = 2;
-        desc.text("Standard time limit, hints, and task difficulty.");
+        desc.text("Standard time limit and hints. Tasks use a fill in the blank format.");
     } else if (button.text() === "Advanced") {
         difficulty = 3;
         desc.text("Free response tasks, less detailed hints, and shorter time limit.");

@@ -9,16 +9,52 @@ let questions = ["question 1", "question 2", "question 3", "question 4", "questi
 let currentQuestion = "";
 
 //Set questions depending on theme
-//TODO: Actually make this work
+//TODO: Replace placeholder values with questions.
 if (theme === 1) {
     //theme is Hacker
     console.log(questions);
+    questions = [
+        "question 1",
+        "question 2",
+        "question 3",
+        "question 4",
+        "question 5",
+        "question 6",
+        "question 7",
+        "question 8",
+        "question 9",
+        "question 10"
+    ];
 } else if (theme === 2) {
     //theme is Time
     console.log(questions);
+    questions = [
+        "question 1",
+        "question 2",
+        "question 3",
+        "question 4",
+        "question 5",
+        "question 6",
+        "question 7",
+        "question 8",
+        "question 9",
+        "question 10"
+    ];
 } else if (theme === 3) {
     //theme is AI Lab
     console.log(questions);
+    questions = [
+        "question 1",
+        "question 2",
+        "question 3",
+        "question 4",
+        "question 5",
+        "question 6",
+        "question 7",
+        "question 8",
+        "question 9",
+        "question 10"
+    ]
 }
 
 //Save the hint button to a variable for easy access.
